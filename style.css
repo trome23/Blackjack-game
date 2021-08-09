@@ -1,14 +1,26 @@
 h1 {
     color: goldenrod;
-    text-align: center;
 }
 
 body {
     background-image: url(images/blackjacktable2.jpg);
-    font-family:  'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
-}
-
-.message-el {
+    background-size: cover;
+    font-family:  'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     color: #fff;
     text-align: center;
+    font-weight: bold;
+}
+
+#message-el {
+   font-style: italic;
+}
+
+#deal-btn {
+    color: #016f32;
+    background: goldenrod;
+    width: 150px;
+    padding: 10px 0px;
+    font-weight: bold;
+    border: none;
+    border-radius: 2px;
 }
