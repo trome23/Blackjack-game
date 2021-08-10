@@ -10,6 +10,15 @@ let messageEl = document.getElementById("message-el")
 let sumEl = document.querySelector("#sum-el")
 let cardsEl = document.querySelector("#cards-el")
 
+let player = {
+    name: "Tyson",
+    chips: 145
+}
+
+let playerEl = document.querySelector("#player-el")
+
+playerEl.textContent = player.name + ": $" + player.chips
+
 function getRandomCard() {    
     let randomNumber = Math.floor(Math.random() * 13) + 1
     if (randomNumber > 10) {
@@ -50,8 +59,10 @@ function renderGame() {
 }
 
 function newCard() {
-    let anotherCard = getRandomCard()
-    sum += anotherCard
-    cards.push(anotherCard)
-    renderGame()
+    if (isAlive && sum !== 21) {
+        let anotherCard = getRandomCard()
+        sum += anotherCard
+        cards.push(anotherCard)
+        renderGame()
+    }
 }
